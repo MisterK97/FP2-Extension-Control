@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch2"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch3"
+        app:layout_constraintTop_toBottomOf="@+id/switch3" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch4"
+        app:layout_constraintTop_toBottomOf="@+id/switch4" />
+
+    <Switch
+        android:id="@+id/switch6"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch5"
+        app:layout_constraintTop_toBottomOf="@+id/switch5" />
+
+    <Switch
+        android:id="@+id/switch7"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch6"
+        app:layout_constraintTop_toBottomOf="@+id/switch6" />
+
+    <Switch
+        android:id="@+id/switch8"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/switch7"
+        app:layout_constraintTop_toBottomOf="@+id/switch7" />
+
+</android.support.constraint.ConstraintLayout>
