@@ -11,9 +11,11 @@ import android.widget.EditText;
 
 import com.felhr.usbserial.UsbSerialInterface;
 
-import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class TempSensorFragment extends Fragment{
+public class TempSensorFragment extends Fragment {
+    private Queue<Byte> bufferedBytes = new LinkedList<>();
     private EditText textBox;
 
     @Override
@@ -32,8 +34,17 @@ public class TempSensorFragment extends Fragment{
         if (getActivity() != null) {
             getActivity().runOnUiThread(() -> {
                 if (textBox != null) {
-                    String string = Arrays.toString(bytes);
-                    textBox.append(string + '\n');
+                    for (byte aByte : bytes) {
+                        if (aByte == '\n') {
+                            while (bufferedBytes.size() > 0) {
+                                char c = (char) bufferedBytes.poll().byteValue();
+                                textBox.append("" + c);
+                            }
+                            textBox.append("\u00b0C\n");
+                        } else {
+                            bufferedBytes.add(aByte);
+                        }
+                    }
                 }
             });
         }
