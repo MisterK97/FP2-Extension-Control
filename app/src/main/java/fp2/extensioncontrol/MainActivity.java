@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         tempSensorFragment = new TempSensorFragment();
         viewPagerAdapter.addFrag(tempSensorFragment, "Temp Sensor");
         viewPagerAdapter.addFrag(new IRRemoteFragment(), "IR Remote");
+        viewPagerAdapter.addFrag(new SoundFragment(), "Sound");
         viewPagerAdapter.notifyDataSetChanged();
     }
 
