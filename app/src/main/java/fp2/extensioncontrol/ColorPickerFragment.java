@@ -33,9 +33,11 @@ public class ColorPickerFragment extends Fragment{
         if (serialPort == null) {
             return;
         }
-        byte red = (byte) (0xFF & (argb >> 16));
-        byte green = (byte) (0xFF & (argb >> 8));
-        byte blue = (byte) (0xFF & argb);
-        serialPort.write(new byte[]{3, red, green, blue});
+
+        int red = (argb >> 16) & 0xff;
+        int green = (argb >>  8) & 0xff;
+        int blue = (argb      ) & 0xff;
+
+        serialPort.write(new byte[]{3, (byte) red, (byte) green,(byte) blue});
     }
 }
